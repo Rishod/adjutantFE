@@ -1,0 +1,20 @@
+.header-style{
+   /*background-color: #004445;*/
+   background-color: #30373e;
+   color: snow;
+   z-index: 10;
+   top: 0;
+   left: 0;
+   right: 0;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,2);
+   /*box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);*/
+   width: 100%;
+   position: fixed;
+   /*height: 77px;*/
+}
+
+.menu-style {
+   z-index: 10;
+   position: fixed;
+
+}

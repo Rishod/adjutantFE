@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@adjutant/task/feature-shell": ["libs/task/feature-shell/src/index.ts"],
+      "@adjutant/task/ui-board": ["libs/task/ui-board/src/index.ts"],
+      "@adjutant/shared/header": ["libs/shared/header/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

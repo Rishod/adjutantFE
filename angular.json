@@ -26,7 +26,13 @@
               "apps/adjutant/src/favicon.ico",
               "apps/adjutant/src/assets"
             ],
-            "styles": ["apps/adjutant/src/styles.scss"],
+            "styles": [
+              "apps/adjutant/src/styles.scss",
+              "node_modules/primeflex/primeflex.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -118,6 +124,87 @@
           }
         }
       }
+    },
+    "task-feature-shell": {
+      "projectType": "library",
+      "root": "libs/task/feature-shell",
+      "sourceRoot": "libs/task/feature-shell/src",
+      "prefix": "task",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/task/feature-shell/tsconfig.lib.json",
+              "libs/task/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/task/feature-shell/jest.config.js",
+            "tsConfig": "libs/task/feature-shell/tsconfig.spec.json",
+            "setupFile": "libs/task/feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "task-ui-board": {
+      "projectType": "library",
+      "root": "libs/task/ui-board",
+      "sourceRoot": "libs/task/ui-board/src",
+      "prefix": "task",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/task/ui-board/tsconfig.lib.json",
+              "libs/task/ui-board/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/task/ui-board/jest.config.js",
+            "tsConfig": "libs/task/ui-board/tsconfig.spec.json",
+            "setupFile": "libs/task/ui-board/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "shared-header": {
+      "projectType": "library",
+      "root": "libs/shared/header",
+      "sourceRoot": "libs/shared/header/src",
+      "prefix": "adjutant",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/header/tsconfig.lib.json",
+              "libs/shared/header/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/header/jest.config.js",
+            "tsConfig": "libs/shared/header/tsconfig.spec.json",
+            "setupFile": "libs/shared/header/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
