@@ -17,6 +17,9 @@
     "task-ui-board": {
       "tags": ["type:ui"]
     },
+    "task-feature-shell": {
+      "tags": ["type:ui"]
+    },
     "shared-header": {
       "tags": ["type:ui"]
     }

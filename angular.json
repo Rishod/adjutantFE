@@ -27,7 +27,7 @@
               "apps/adjutant/src/assets"
             ],
             "styles": [
-              "apps/adjutant/src/styles.scss",
+              "apps/adjutant/src/app/theme/styles.scss",
               "node_modules/primeflex/primeflex.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
