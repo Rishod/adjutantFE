@@ -1,0 +1,24 @@
+:host ::ng-deep {
+  display: block;
+
+  .menu-items,
+  .menu-item > .menu-items {
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+  .menu-item a {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    align-items: center;
+
+    .menu-title {
+      flex: 1 0 auto;
+    }
+  }
+
+  .menu-group span {
+    display: flex;
+  }
+}

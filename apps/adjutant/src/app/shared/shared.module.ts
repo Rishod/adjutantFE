@@ -13,6 +13,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {NbSecurityModule} from "@nebular/security";
 import { HeaderComponent } from './header/header.component';
 import { PageComponent } from './page/page.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 const ANGULAR_MODULES = [
   CommonModule,
@@ -38,11 +39,12 @@ const NB_MODULES = [
 
 const COMPONENTS = [
   HeaderComponent,
+  HeaderMenuComponent,
   PageComponent
 ];
 
 @NgModule({
-  declarations: [...COMPONENTS, PageComponent],
+  declarations: [...COMPONENTS, PageComponent, HeaderMenuComponent],
   imports: [...ANGULAR_MODULES, ...NB_MODULES],
   exports: [...ANGULAR_MODULES, ...NB_MODULES, ...COMPONENTS]
 })

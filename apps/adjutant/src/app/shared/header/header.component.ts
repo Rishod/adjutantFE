@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService} from "@nebular/theme";
+import {NbMenuService, NbThemeService} from "@nebular/theme";
 import {map, takeUntil} from "rxjs/internal/operators";
 import {Subject} from "rxjs";
 
@@ -7,7 +7,6 @@ import {Subject} from "rxjs";
   selector: 'adjutant-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  providers: [NbMenuService]
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
@@ -36,20 +35,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   currentTheme = 'default';
 
   constructor(private menuService: NbMenuService,
-              private themeService: NbThemeService,
-              private breakpointService: NbMediaBreakpointsService) {
+              private themeService: NbThemeService) {
   }
 
   ngOnInit() {
     this.currentTheme = this.themeService.currentTheme;
-
-    const { xl } = this.breakpointService.getBreakpointsMap();
-    this.themeService.onMediaQueryChange()
-      .pipe(
-        map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
-        takeUntil(this.destroy$),
-      )
-      .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
 
     this.themeService.onThemeChange()
       .pipe(
