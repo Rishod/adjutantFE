@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {NbMenuItem} from "@nebular/theme";
 
 @Component({
   selector: 'adjutant-header-menu',
@@ -8,38 +7,37 @@ import {NbMenuItem} from "@nebular/theme";
 })
 export class HeaderMenuComponent implements OnInit {
 
-  items : NbMenuItem[] = [
+  tabs = [
     {
       title: 'Dashboard',
-      link: '/',
+      route: '/dashboard',
       icon: 'home-outline'
     },
 
     {
       title: 'Projects',
-      link: '/projects',
+      route: '/projects',
       icon: 'briefcase-outline'
 
     },
 
     {
       title: 'To-Do',
-      link: '/task',
+      route: '/task',
       icon: 'checkmark-square-2-outline'
     },
 
     {
       title: 'Calendar',
-      link: '/calendar',
+      route: '/calendar',
       icon: 'calendar-outline'
     },
 
     {
-      title: 'Notebook',
-      link: '/notebook',
+      title: 'Notebooks',
+      route: '/notebook',
       icon: 'book-outline'
     },
-
   ];
 
   constructor() { }

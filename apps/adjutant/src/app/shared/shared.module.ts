@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   NbActionsModule,
   NbButtonModule, NbCardModule, NbContextMenuModule, NbIconModule, NbLayoutModule, NbMenuModule, NbMenuService,
+  NbRouteTabsetModule,
   NbSearchModule,
   NbSelectModule,
   NbSidebarModule, NbUserModule
@@ -34,12 +35,12 @@ const NB_MODULES = [
   NbSelectModule,
   NbIconModule,
   NbEvaIconsModule,
-  NbCardModule
+  NbCardModule,
+  NbRouteTabsetModule
 ];
 
 const COMPONENTS = [
   HeaderComponent,
-  HeaderMenuComponent,
   PageComponent
 ];
 
