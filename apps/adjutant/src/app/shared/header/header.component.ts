@@ -30,9 +30,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
       value: 'corporate',
       name: 'Corporate',
     },
+    {
+      value: 'adjutantDefault',
+      name: 'Adjutant default',
+    },
   ];
 
-  currentTheme = 'default';
+  currentTheme = 'adjutantDefault';
 
   constructor(private menuService: NbMenuService,
               private themeService: NbThemeService) {
