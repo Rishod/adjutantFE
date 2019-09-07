@@ -1,10 +1,35 @@
 <adjutant-page>
 
-  <nb-card>
-    <nb-card-header>todo-container works!</nb-card-header>
-    <nb-card-body>
 
-    </nb-card-body>
-  </nb-card>
+
+  <div class="ui-g">
+
+
+
+    <div class="ui-g-3 ui-g-offset-2">
+
+      <nb-card>
+        <nb-card-body>
+          <p> todo filters</p>
+        </nb-card-body>
+      </nb-card>
+
+    </div>
+
+    <div class="ui-g-5">
+
+      <nb-card>
+        <nb-card-body>
+
+          <adjutant-todo-period-container [periodName]="'Overdue'"></adjutant-todo-period-container>
+          <adjutant-todo-period-container [periodName]="'Today'"></adjutant-todo-period-container>
+
+        </nb-card-body>
+      </nb-card>
+
+    </div>
+
+
+  </div>
 
 </adjutant-page>

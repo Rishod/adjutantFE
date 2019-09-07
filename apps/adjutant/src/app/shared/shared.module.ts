@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   NbActionsModule,
-  NbButtonModule, NbCardModule, NbContextMenuModule, NbIconModule, NbLayoutModule, NbMenuModule, NbMenuService,
+  NbButtonModule, NbCardModule, NbCheckboxModule, NbContextMenuModule, NbIconModule, NbLayoutModule, NbMenuModule,
+  NbMenuService,
   NbRouteTabsetModule,
   NbSearchModule,
   NbSelectModule,
@@ -36,7 +37,8 @@ const NB_MODULES = [
   NbIconModule,
   NbEvaIconsModule,
   NbCardModule,
-  NbRouteTabsetModule
+  NbRouteTabsetModule,
+  NbCheckboxModule
 ];
 
 const COMPONENTS = [

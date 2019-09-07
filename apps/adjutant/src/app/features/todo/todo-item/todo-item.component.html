@@ -1,0 +1,14 @@
+<nb-card class="todo-item">
+  <nb-card-body>
+    <nb-checkbox [checked]="item.completed" (checkedChange)="complete($event)">{{item.name}}</nb-checkbox>
+
+    <div class="todo-item-right-part">
+
+      <nb-actions>
+        <nb-action icon="edit-outline"></nb-action>
+        <nb-action icon="trash-2-outline"></nb-action>
+        <nb-action icon="menu-outline"></nb-action>
+      </nb-actions>
+    </div>
+  </nb-card-body>
+</nb-card>
